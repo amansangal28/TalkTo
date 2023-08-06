@@ -4,7 +4,7 @@ mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-  
+const db = mongoose.connection;
   mongoose.connection.on('connected', () => {
     console.log('Connected to MongoDB');
   });
@@ -16,3 +16,4 @@ mongoose.connect(dbURI, {
   mongoose.connection.on('disconnected', () => {
     console.log('Disconnected from MongoDB');
   });
+  module.exports= db;

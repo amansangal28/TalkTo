@@ -6,12 +6,20 @@ module.exports.profile = function(req,res){
 }
 // render Sign Up Page
 module.exports.signup = function(req, res){
+    if(req.isAuthenticated())
+    {
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_up', {
         title: "TalkTo | Sign Up"
     })
 }
 // render Sign In Page
 module.exports.signin = function(req, res){
+    if(req.isAuthenticated())
+    {
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_in', {
         title: "TalkTo | Sign In"
     })
@@ -41,5 +49,13 @@ module.exports.create = function(req,res)
 //Find existing User or Authentication and existing user
 module.exports.createSession = function(req,res)
 {
+    return res.redirect('/');
+}
 
+// Signing Out the User
+module.exports.destroySession = function(req,res){
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+      });
 }
