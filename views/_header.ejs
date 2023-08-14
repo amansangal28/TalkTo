@@ -1,20 +1,23 @@
+<link rel="stylesheet" href="/css/header.css">
 <header>
-        <span>Page Header</span>
+    <div id="page-header">
+        <span id="page-label">TalkTo</span>
         <% if(locals.user){ %>
-            <span>
-                <a href="/users/profile">
+            <span id="logged-in-user">
+                <a href="/users/profile/<%= locals.user.id %>">
                     <%= user.name %>
                 </a>
             </span>
-            <span>
+            <span id="sign-out">
                 <a href="/users/sign-out">Sign Out</a>
             </span>
         <% }else{ %>
-            <span>
+            <span id="sign-in">
                 <a href="/users/sign-in">Sign In</a>
             </span>
-            <span>
+            <span id="sign-up">
                 <a href="/users/sign-up">Sign Up</a>
             </span>
         <% } %> 
+    </div>
 </header>

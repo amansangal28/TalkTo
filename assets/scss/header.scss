@@ -1,0 +1,43 @@
+#page-header{
+    display: flex;
+    height: 6%;
+    background-color: blueviolet;
+    border-bottom: 2px solid lightgray;
+    font-family: sans-serif;
+    font-weight: 200;
+    color: white;
+
+    #page-label{
+        width: 85%;
+        padding: 10px;
+        font-style: bold;
+    }
+    #logged-in-user{
+        width: 9%;
+        padding: 10px;
+        a{
+            color: white;
+        }
+    }
+    #sign-out{
+        width: 6%;
+        padding: 10px;
+        a{
+            color: white;
+        }
+    }
+    #sign-in{
+        width: 8%;
+        padding: 10px;
+        a{
+            color: white;
+        }
+    }
+    #sign-up{
+        width: 7%;
+        padding: 10px;
+        a{
+            color: white;
+        }
+    }
+}

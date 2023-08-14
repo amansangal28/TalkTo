@@ -1,0 +1,32 @@
+#page-header {
+  display: flex;
+  height: 6%;
+  background-color: blueviolet;
+  border-bottom: 2px solid lightgray;
+  font-family: sans-serif;
+  font-weight: 200;
+  color: white; }
+  #page-header #page-label {
+    width: 85%;
+    padding: 10px;
+    font-style: bold; }
+  #page-header #logged-in-user {
+    width: 9%;
+    padding: 10px; }
+    #page-header #logged-in-user a {
+      color: white; }
+  #page-header #sign-out {
+    width: 6%;
+    padding: 10px; }
+    #page-header #sign-out a {
+      color: white; }
+  #page-header #sign-in {
+    width: 8%;
+    padding: 10px; }
+    #page-header #sign-in a {
+      color: white; }
+  #page-header #sign-up {
+    width: 7%;
+    padding: 10px; }
+    #page-header #sign-up a {
+      color: white; }
